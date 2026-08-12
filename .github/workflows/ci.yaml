@@ -54,11 +54,11 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: deployment
 
-      - name: Update Image Tag
+      - name: Update Image Tag  
         run: |
           cd deployment
 
-          sed -i "s|image:.*|image: ${{ secrets.DOCKER_USERNAME }}/spring-app:${{ github.sha }}|g" deployment.yaml
+          sed -i "s|image:.*|image: ${{ secrets.DOCKER_USERNAME }}/spring-app:${{ github.sha }}|g" k8s/deployment.yaml
 
       - name: Commit Changes
         run: |

@@ -50,7 +50,7 @@ jobs:
       - name: Checkout Deployment Repository
         uses: actions/checkout@v4
         with:
-          repository: barath-bmwtechworks/k8s-deployment-repo
+          repository: barath-bmwtechworks/kube-deployment
           token: ${{ secrets.GH_PAT }}
           path: deployment
 
